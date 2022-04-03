@@ -52,7 +52,7 @@ form {
 }
 
 #product {
-  width: 400px;
+  width: 395px;
   height: 25px;
   border: none;
   border-top-left-radius: 5px;
@@ -86,7 +86,7 @@ form {
 .list p {
   width: 480px;
   height: 35px;
-  background-color: bisque;
+  background-color: rgb(240, 226, 241);
   border-radius: 5px;
   display: flex;
   align-items: center;

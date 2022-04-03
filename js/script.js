@@ -14,11 +14,16 @@ clear.addEventListener("click", clearItems)
 
 function addItem(e) {
   e.preventDefault()
+  let id = new Date().getTime().toString()
 
   if (inputDOM.value && !editFlag) {
     let list = document.createElement("DIV")
+    let attr = document.createAttribute("id")
+    attr.value = id;
+
+    list.setAttributeNode(attr)
     list.classList.add("list")
-    
+
     list.innerHTML = `
                 <p>${inputDOM.value}</p>
                 <div class="btn-container">
@@ -57,12 +62,12 @@ function backToDefault() {
 }
 
 // ALERT
-function alertTime (message, color) {
+function alertTime(message, color) {
   alert.innerHTML = message;
   alert.style.backgroundColor = color
 
   //remove alert
-  setTimeout(function() {
+  setTimeout(function () {
     alert.innerHTML = "";
     alert.style.backgroundColor = "white"
   }, 1000)
@@ -92,7 +97,7 @@ function clearItems() {
     listItem.forEach(item => {
       listContainer.removeChild(item)
     })
-  } 
-  // clearContainer.classList.add("nonvisible")
-  
+  }
+
 }
+
